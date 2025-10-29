@@ -25,11 +25,17 @@
     const BACKENDURL = "https://mapified.onrender.com/pins";
 
     function makeSpotifyEmbedURL(url: string) {
+        function matchesFormat(url: string) {
+            const pattern = /^https:\/\/open\.spotify\.com\/embed\/.+$/;
+            return pattern.test(url);
+        }
         if (!url) return "";
-        return url.replace(
+        let fixed_url = url.replace(
             "open.spotify.com/track/",
             "open.spotify.com/embed/track/",
         );
+        if (matchesFormat(url)) return url;
+        else return fixed_url;
     }
 
     function stripSpotifyParams(url: string) {
