@@ -10,6 +10,12 @@
 
     delete L.Icon.Default.prototype._getIconUrl;
 
+    L.Icon.Default.mergeOptions({
+        iconRetinaUrl,
+        iconUrl,
+        shadowUrl,
+    });
+
     let map: LeafletMap;
     let pins: Pin[] = [];
     let newPinCoords: { lat: number; lng: number } | null = null;
