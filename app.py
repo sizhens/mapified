@@ -9,7 +9,11 @@ app = Flask(__name__)
 load_dotenv()
 
 app.config["MONGO_URI"] = os.getenv("DATABASE_URL")
-CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+CORS(
+    app,
+    resources={r"/*": {"origins": "https://mapified-frontend.onrender.com"}},
+    supports_credentials=True,
+)
 print("CORS registered for routes:", app.url_map)
 mongo = PyMongo(app)
 mongo.init_app(app)
