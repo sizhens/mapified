@@ -74,8 +74,9 @@
         map.on("click", (e) => {
             if (popup) map.closePopup(popup);
             newPinCoords = { lat: e.latlng.lat, lng: e.latlng.lng };
-            const point = map.latLngToContainerPoint(e.latlng);
-            pinFormPosition = { x: point.x, y: point.y };
+            const pointx = e.originalEvent.clientX;
+            const pointy = e.originalEvent.clientY;
+            pinFormPosition = { x: pointx, y: pointy };
         });
     });
 </script>
