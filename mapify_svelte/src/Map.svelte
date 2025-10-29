@@ -132,4 +132,9 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         position: relative;
     }
+
+    .leaflet-control-zoom {
+        border-radius: 10px;
+        background-color: rgba(143, 188, 143, 0.8);
+    }
 </style>
