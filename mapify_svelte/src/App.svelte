@@ -49,6 +49,7 @@
 
     :global(.map-container) {
         flex: 1 1 auto;
+        max-width: 1280px;
     }
 
     footer {
