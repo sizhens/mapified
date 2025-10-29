@@ -1,11 +1,14 @@
+from dotenv import load_dotenv
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_pymongo import PyMongo
 from datetime import datetime, timezone
 
 app = Flask(__name__)
+load_dotenv()
 
-app.config["MONGO_URI"] = ${{ secrets.DATABASE_URL }}
+app.config["MONGO_URI"] = os.getenv("DATABASE_URL")
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 print("CORS registered for routes:", app.url_map)
 mongo = PyMongo(app)
