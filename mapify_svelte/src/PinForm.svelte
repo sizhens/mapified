@@ -11,7 +11,7 @@
 
     export let spotifyURL = "";
     export let text = "";
-    const BACKENDURL = "http://127.0.0.1:5000/pins";
+    const BACKENDURL = "https://mapified.onrender.com/pins";
 
     async function submit() {
         if (!spotifyURL) return alert("Spotify URL required");
