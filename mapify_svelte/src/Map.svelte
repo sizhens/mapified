@@ -54,9 +54,9 @@
         popupHTML += `<iframe src="${makeSpotifyEmbedURL(stripSpotifyParams(pin.spotify_url))}" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
         if (pin.text) {
             popupHTML += `<p>${pin.text}</p>`;
-            if (pin.created_at) {
-                popupHTML += `<small>${new Date(pin.created_at).toLocaleString()}"-UTC"</small>`;
-            }
+        }
+        if (pin.created_at) {
+            popupHTML += `<small>${new Date(pin.created_at).toLocaleString()}"-UTC"</small>`;
         }
         marker.bindPopup(popupHTML).openPopup();
     }
