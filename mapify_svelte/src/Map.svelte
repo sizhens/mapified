@@ -88,8 +88,8 @@
             <div
                 class="pin-form-wrapper"
                 style="position:absolute;
-                left:{pinFormPosition.x}px;
-                top:{pinFormPosition.y}px; z-index:1000;"
+                left:{pinFormPosition.x - 100}px;
+                top:{pinFormPosition.y + 100}px; z-index:1000;"
             >
                 <PinForm
                     lat={newPinCoords.lat}
@@ -115,8 +115,5 @@
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         position: relative;
-    }
-    .pinFormWrapper {
-        transform: translateX(50%), translateY(100%);
     }
 </style>
