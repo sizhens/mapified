@@ -11,7 +11,7 @@
     let popup: L.Popup | null = null;
     let pinFormPosition: { x: number; y: number } | null = null;
 
-    const BACKENDURL = "http://127.0.0.1:5000/pins";
+    const BACKENDURL = "https://mapified.onrender.com/pins";
 
     function makeSpotifyEmbedURL(url: string) {
         if (!url) return "";
