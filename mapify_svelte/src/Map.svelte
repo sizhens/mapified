@@ -4,6 +4,11 @@
     import "leaflet/dist/leaflet.css";
     import PinForm from "./PinForm.svelte";
     import type { Pin } from "../types";
+    import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
+    import iconUrl from "leaflet/dist/images/marker-icon.png";
+    import shadowUrl from "leaflet/dist/images/marker-shadow.png";
+
+    delete L.Icon.Default.prototype._getIconUrl;
 
     let map: LeafletMap;
     let pins: Pin[] = [];
