@@ -70,7 +70,7 @@
     .pin-form {
         position: absolute;
         background: white;
-        left: 30px;
+        /*left: 30px;*/
         padding: 0.5rem;
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
