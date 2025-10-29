@@ -62,4 +62,4 @@ def new_pin():
 
 
 if __name__ == "__main__":
-    app.run(debug="true")
+    app.run()
