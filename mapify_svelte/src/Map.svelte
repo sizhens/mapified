@@ -88,7 +88,7 @@
             <div
                 class="pin-form-wrapper"
                 style="position:absolute;
-                left:{pinFormPosition.x - 100}px;
+                left:{pinFormPosition.x - 110}px;
                 top:{pinFormPosition.y - 100}px; z-index:1000;"
             >
                 <PinForm
