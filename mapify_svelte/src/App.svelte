@@ -29,6 +29,7 @@
         height: 100%;
         margin: 0;
         padding: 0;
+        width: 100%;
         overflow: hidden;
     }
     :global(body) {
@@ -37,9 +38,11 @@
         align-items: center;
     }
     main {
+        position: relative;
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 100dvh;
+        width: 100%;
     }
 
     header {
