@@ -89,6 +89,7 @@
                 class="pin-form-wrapper"
                 style="position:absolute;
                 width:220px;
+                height:300px;
                 left:{pinFormPosition.x - 110}px;
                 top:{pinFormPosition.y - 150}px; z-index:1000;"
             >
