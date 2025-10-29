@@ -13,8 +13,16 @@
     export let text = "";
     const BACKENDURL = "https://mapified.onrender.com/pins";
 
+    function matchesFormat(url: string) {
+        const pattern = /^https:\/\/open\.spotify\.com\/.+$/;
+        return pattern.test(url);
+    }
+
     async function submit() {
         if (!spotifyURL) return alert("Spotify URL required");
+        if (!matchesFormat(spotifyURL)) {
+            return alert("Please use an open.spotify.com link!");
+        }
 
         const newPin: Pin = {
             lat,
