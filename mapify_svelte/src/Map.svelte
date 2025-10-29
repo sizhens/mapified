@@ -90,8 +90,8 @@
                 style="position:absolute;
                 width:220px;
                 height:300px;
-                left:{pinFormPosition.x - 110}px;
-                top:{pinFormPosition.y - 130}px; z-index:1000;"
+                left:{pinFormPosition.x - 115}px;
+                top:{pinFormPosition.y - 120}px; z-index:1000;"
             >
                 <PinForm
                     lat={newPinCoords.lat}
