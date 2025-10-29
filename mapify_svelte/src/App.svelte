@@ -17,7 +17,7 @@
     </header>
     <Map />
     <footer>
-        <p><small>lovingly crafted in 2025 by sizhen shao</small></p>
+        <p><small>lovingly crafted in 2025 by sizhens</small></p>
     </footer>
 </main>
 
