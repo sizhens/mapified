@@ -15,18 +15,40 @@
             <p>music. memory. place.</p>
         </div>
     </header>
-    <Map />
+    <div class="map-container">
+        <Map />
+    </div>
+
     <footer>
         <p><small>lovingly crafted in 2025 by sizhens</small></p>
     </footer>
 </main>
 
 <style>
-    :global html {
-        max-height: 100vh;
-        min-height: 100vh;
-        max-width: 100vh;
-        min-width: 100vh;
+    :global(html, body) {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    header {
+        flex: 0 0 auto;
+        min-height: 5vh;
+    }
+
+    :global(.map-container) {
+        flex: 1 1 auto;
+    }
+
+    footer {
+        flex: 0 0 auto;
     }
     .animated-bg {
         position: fixed;
@@ -54,7 +76,6 @@
     header {
         color: white;
         text-align: center;
-        min-height: 5vh;
         font-family:
             "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
             "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
