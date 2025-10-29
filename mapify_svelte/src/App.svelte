@@ -22,6 +22,12 @@
 </main>
 
 <style>
+    :global html {
+        max-height: 100vh;
+        min-height: 100vh;
+        max-width: 100vh;
+        min-width: 100vh;
+    }
     .animated-bg {
         position: fixed;
         top: 0;
