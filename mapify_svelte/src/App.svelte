@@ -51,6 +51,7 @@
         flex: 1 1 auto;
         max-width: 1280px;
         overflow-x: hidden;
+        border-radius: 30px;
     }
 
     footer {
