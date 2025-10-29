@@ -26,7 +26,10 @@
 
     function makeSpotifyEmbedURL(url: string) {
         if (!url) return "";
-        return url.replace("open.spotify.com/", "open.spotify.com/embed/");
+        return url.replace(
+            "open.spotify.com/track/",
+            "open.spotify.com/embed/track/",
+        );
     }
 
     function stripSpotifyParams(url: string) {
