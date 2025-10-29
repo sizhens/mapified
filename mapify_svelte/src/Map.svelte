@@ -7,6 +7,7 @@
     import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
     import iconUrl from "leaflet/dist/images/marker-icon.png";
     import shadowUrl from "leaflet/dist/images/marker-shadow.png";
+    import { tick } from "svelte";
 
     delete L.Icon.Default.prototype._getIconUrl;
 
@@ -74,7 +75,8 @@
         if (popup) map.closePopup(popup);
     }
 
-    onMount(() => {
+    onMount(async () => {
+        await tick();
         map = L.map("map").setView([39.95, -75.15], 13);
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             attribution: "&copy; OpenStreetMap contributors",
@@ -87,6 +89,8 @@
             const pointy = e.originalEvent.clientY;
             pinFormPosition = { x: pointx, y: pointy };
         });
+        await tick();
+        map.invalidateSize();
     });
 </script>
 
@@ -120,8 +124,8 @@
 
 <style>
     #map {
-        height: 100%;
-        width: 100%;
+        height: 80dvh;
+        width: 80dvw;
         border-radius: 30px;
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
