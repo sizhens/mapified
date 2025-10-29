@@ -60,6 +60,3 @@ def new_pin():
     }
     pins_collection.insert_one(pin_doc)
     return jsonify({"status": "success"}), 201
-
-
-gunicorn app:app --bind 0.0.0.0:$PORT
