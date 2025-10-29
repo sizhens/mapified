@@ -56,7 +56,7 @@
             popupHTML += `<p>${pin.text}</p>`;
         }
         if (pin.created_at) {
-            popupHTML += `<small>${new Date(pin.created_at).toLocaleString()}"-UTC"</small>`;
+            popupHTML += `<small>${new Date(pin.created_at).toLocaleString()}-UTC</small>`;
         }
         marker.bindPopup(popupHTML).openPopup();
     }
