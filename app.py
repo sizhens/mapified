@@ -12,7 +12,7 @@ load_dotenv()
 app.config["MONGO_URI"] = os.getenv("DATABASE_URL")
 CORS(
     app,
-    resources={r"/*": {"origins": "https://https://www.mapified.me"}},
+    resources={r"/*": {"origins": "https://www.mapified.me"}},
     supports_credentials=True,
 )
 print("CORS registered for routes:", app.url_map)
