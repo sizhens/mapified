@@ -88,8 +88,9 @@
             <div
                 class="pin-form-wrapper"
                 style="position:absolute;
-                left:{pinFormPosition.x - 115}px;
-                top:{pinFormPosition.y - 140}px; z-index:1000;"
+                width:220px;
+                left:{pinFormPosition.x - 110}px;
+                top:{pinFormPosition.y - 150}px; z-index:1000;"
             >
                 <PinForm
                     lat={newPinCoords.lat}
