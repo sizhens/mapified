@@ -120,8 +120,8 @@
 
 <style>
     #map {
-        height: 80vh;
-        width: 80vw;
+        height: 100%;
+        width: 100%;
         border-radius: 30px;
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
