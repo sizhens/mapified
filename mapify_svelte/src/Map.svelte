@@ -92,6 +92,7 @@
                 [-90, -180],
                 [90, 180],
             ],
+            minZoom: 2,
         }).setView([39.95, -75.15], 13);
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             attribution: "&copy; OpenStreetMap contributors",
