@@ -141,7 +141,7 @@
 <style>
     #map {
         height: 80dvh;
-        width: 80dvh;
+        width: 80dvw;
         max-width: 1280px;
         border-radius: 30px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
