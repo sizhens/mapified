@@ -89,8 +89,8 @@
             worldCopyJump: true,
             maxBoundsViscosity: 1.0,
             maxBounds: [
-                [-90, -180],
-                [90, 180],
+                [-90, -200],
+                [90, 200],
             ],
             minZoom: 2,
         }).setView([39.95, -75.15], 13);
