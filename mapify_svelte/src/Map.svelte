@@ -92,6 +92,7 @@
                 [-90, -180],
                 [90, 180],
             ],
+            minZoom: 2,
         }).setView([39.95, -75.15], 13);
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             attribution: "&copy; OpenStreetMap contributors",
@@ -140,7 +141,7 @@
 <style>
     #map {
         height: 80dvh;
-        width: 100%;
+        width: 80dvh;
         max-width: 1280px;
         border-radius: 30px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
