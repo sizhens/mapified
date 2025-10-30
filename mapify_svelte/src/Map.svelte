@@ -43,14 +43,22 @@
         return url.split("?")[0];
     }
 
+    function normalizeLongitude(lng: number): number {
+        return ((((lng + 180) % 360) + 360) % 360) - 180;
+    }
+
+    function normalizePin(pin: Pin): Pin {
+        return {
+            ...pin,
+            lng: normalizeLongitude(pin.lng),
+        };
+    }
+
     async function fetchPins() {
         try {
             const res = await fetch(BACKENDURL);
-            const pins: Pin[] = await res.json();
-
-            pins.forEach((pin) => {
-                addPin(pin);
-            });
+            let pins: Pin[] = await res.json();
+            pins.map(normalizePin).forEach(addPin);
         } catch (err) {
             console.error("Error fetching pins:", err);
         }
@@ -77,7 +85,14 @@
 
     onMount(async () => {
         await tick();
-        map = L.map("map").setView([39.95, -75.15], 13);
+        map = L.map("map", {
+            worldCopyJump: true,
+            maxBoundsViscosity: 1.0,
+            maxBounds: [
+                [-90, -180],
+                [90, 180],
+            ],
+        }).setView([39.95, -75.15], 13);
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             attribution: "&copy; OpenStreetMap contributors",
         }).addTo(map);
