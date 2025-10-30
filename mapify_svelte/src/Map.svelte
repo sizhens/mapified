@@ -140,10 +140,9 @@
 <style>
     #map {
         height: 80dvh;
-        width: 80dvw;
+        width: 100%;
         max-width: 1280px;
         border-radius: 30px;
-        overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         position: relative;
     }
