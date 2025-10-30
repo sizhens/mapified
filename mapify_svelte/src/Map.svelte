@@ -79,6 +79,7 @@
         await tick();
         map = L.map("map").setView([39.95, -75.15], 13);
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            noWrap: true,
             attribution: "&copy; OpenStreetMap contributors",
         }).addTo(map);
         fetchPins();
